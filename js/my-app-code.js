@@ -30,23 +30,30 @@ function showLatLng(e) {
 function setMapView(zoomLevel, latitude, longitude) {
   map.setView([latitude, longitude], zoomLevel);
 }
-function goTo(e) {
-  var zoom = document.getElementById("zoomInput").value;
-  var lat = document.getElementById("latInput").value;
-  var lon = document.getElementById("lonInput").value;
-  setMapView(zoom, lat, lon);
-}
+
 function setMapView(zoomLevel, latitude, longitude) {
-  map.setView([latitude, longitude], zoomLevel);
+  map.setView([43.8041,-120.5542], 8);
 }
-document.getElementById("goTo").onclick = goTo;
+document.getElementById("goTo").onclick=setMapView;
 {
   ;
 };
     function ReplacingImage() {
     document.getElementById("Oregon State Park Img").src="OSimage.jpg";
     
-}/*
+}
+    var searchControl = L.esri.Geocoding.geosearch().addTo(map);
+
+  var results = L.layerGroup().addTo(map);
+
+  searchControl.on('results', function(data){
+    results.clearLayers();
+    for (var i = data.results.length - 1; i >= 0; i--) {
+      results.addLayer(L.marker(data.results[i].latlng));
+    }
+  });
+    
+    /*
     map.setView([43.8041,-123.5542], 16)
 */
 

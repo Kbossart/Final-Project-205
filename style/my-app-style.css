@@ -24,15 +24,15 @@ html, body,
   margin: 4px;
   padding: 2px;
   border-radius: 3px;
-  font-size:12px;
+  font-size:10px:;
   font-weight:900;
   border: 2px solid rgba(0,80,255,0.5);
 }
 #button:hover {
   cursor:pointer;
-  background-color: darkblue;
+  background-color:black;
 }
-#img:    { 
+#OregonStateParkImg    { 
  position:absolute;
  z-index:99999999999999999999999999999999999999999999;
  bottom:10px;
