@@ -43,9 +43,9 @@ document.getElementById("goTo").onclick = goTo;
 {
   ;
 };
-    function myFunction() {
-    var x = document.getElementById("Oregon State Park Img").src;
-    document.getElementById("Oregon State Park Img").innerHTML = x;
+    function ReplacingImage() {
+    document.getElementById("Oregon State Park Img").src="OSimage.jpg";
+    
 }/*
     map.setView([43.8041,-123.5542], 16)
 */
