@@ -27,11 +27,20 @@ map.on('mousemove', showLatLng);
 function showLatLng(e) {
   document.getElementById("latandlong").innerText = (e.latlng.lat).toFixed(5) + " | " + (e.latlng.lng).toFixed(5);
 }
-    function setMapView(zoomLevel, latitude, longitude) {
+function setMapView(zoomLevel, latitude, longitude) {
+  map.setView([latitude, longitude], zoomLevel);
+}
+function goTo(e) {
+  var zoom = document.getElementById("zoomInput").value;
+  var lat = document.getElementById("latInput").value;
+  var lon = document.getElementById("lonInput").value;
+  setMapView(zoom, lat, lon);
+}
+function setMapView(zoomLevel, latitude, longitude) {
   map.setView([latitude, longitude], zoomLevel);
 }
 document.getElementById("goTo").onclick = goTo;
- {
+{
   ;
 };
     /*
