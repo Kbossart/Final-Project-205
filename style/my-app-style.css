@@ -1,1 +1,34 @@
-html, body,#map{width:100%;height:100%}
+html, body,
+#map{
+    width:100%;
+    height:100%}
+#latandlong {
+    position: absolute; 
+    z-index: 99999999999999999999999999999999999999; 
+    top:20px;
+    right:20px;
+    }
+.floater {
+  position: absolute;
+  z-index: 999999999999999999999999999999999999999;
+}
+
+#goContainer {
+  bottom: 10px;
+  left: 50px;
+  background-color: rgba(258,258,258,0.9);
+  padding: 4px;
+  border-radius:4px;
+}
+button {
+  margin: 8px;
+  padding: 4px;
+  border-radius: 6px;
+  font-size:14px;
+  font-weight:900;
+  border: 2px solid rgba(0,80,255,0.5);
+}
+button:hover {
+  cursor:pointer;
+  background-color: darkblue;
+}
