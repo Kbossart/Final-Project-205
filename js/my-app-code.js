@@ -7,19 +7,59 @@ L.esri.dynamicMapLayer({
     opacity: 1
   }).addTo(map);
     L.esri.featureLayer({
-  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/0"
+  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/0",
+          pointToLayer: function (geojson, latlng) {
+        return L.circleMarker(latlng, {
+          color: 'white',
+          weight: 2,
+          fillColor: 'darkorange',
+          fillOpacity: 0.6
+        });
+      }
   }).addTo(map);
     L.esri.featureLayer({
-  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/1"
+  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/1",
+      pointToLayer: function (geojson, latlng) {
+        return L.circleMarker(latlng, {
+          color: 'white',
+          weight: 2,
+          fillColor: 'red',
+          fillOpacity: 0.6
+        });
+      }  
   }).addTo(map);
     L.esri.featureLayer({
-  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/2"
+  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/2",
+        pointToLayer: function (geojson, latlng) {
+        return L.circleMarker(latlng, {
+          color: 'white',
+          weight: 2,
+          fillColor: 'yellow',
+          fillOpacity: 0.6
+        });
+      }  
   }).addTo(map);
    L.esri.featureLayer({
-  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/3"
+  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/3",
+       pointToLayer: function (geojson, latlng) {
+        return L.circleMarker(latlng, {
+          color: 'white',
+          weight: 2,
+          fillColor: 'brown',
+          fillOpacity: 0.6
+        });
+      }  
   }).addTo(map); 
    L.esri.featureLayer({
-  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/4"
+  url: "https://gis.blm.gov/orarcgis/rest/services/Facility/BLM_OR_Recreation_Site/MapServer/4",
+       pointToLayer: function (geojson, latlng) {
+        return L.circleMarker(latlng, {
+          color: 'white',
+          weight: 2,
+          fillColor: 'green',
+          fillOpacity: 0.6
+        });
+      }  
   }).addTo(map);  
     
 map.on('mousemove', showLatLng);
